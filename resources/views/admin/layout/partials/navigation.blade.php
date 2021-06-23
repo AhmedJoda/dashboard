@@ -3,7 +3,8 @@
 
     <!-- Navigation start -->
     <nav class="navbar navbar-expand-lg custom-navbar">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#WafiAdminNavbar" aria-controls="WafiAdminNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#WafiAdminNavbar"
+            aria-controls="WafiAdminNavbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon">
                 <i></i>
                 <i></i>
@@ -13,7 +14,8 @@
         <div class="collapse navbar-collapse" id="WafiAdminNavbar">
             <ul class="navbar-nav">
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="dashboardsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="dashboardsDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="icon-devices_other nav-icon"></i>
                         الرئيسية
                     </a>
@@ -43,7 +45,8 @@
                             <a class="dropdown-item" href="helpdesk-dashboard.html">Help Desk Dashboard</a>
                         </li>
                         <li>
-                            <a class="dropdown-toggle sub-nav-link" href="#" id="layoutsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="dropdown-toggle sub-nav-link" href="#" id="layoutsDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Layouts
                             </a>
                             <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="layoutsDropdown">
@@ -70,7 +73,8 @@
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="appsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="appsDropdown" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
                         <i class="icon-package nav-icon"></i>
                         زيارة الواجهة
                     </a>
@@ -85,7 +89,8 @@
                             <a class="dropdown-item" href="documents.html">Documents</a>
                         </li>
                         <li>
-                            <a class="dropdown-toggle sub-nav-link" href="#" id="calendarsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="dropdown-toggle sub-nav-link" href="#" id="calendarsDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Calendars
                             </a>
                             <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="calendarsDropdown">
@@ -93,7 +98,8 @@
                                     <a class="dropdown-item" href="calendar.html">Daygrid View</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="calendar-external-draggable.html">External Draggable</a>
+                                    <a class="dropdown-item" href="calendar-external-draggable.html">External
+                                        Draggable</a>
                                 </li>
                                 <li>
                                     <a class="dropdown-item" href="calendar-google.html">Google Calendar</a>
@@ -127,123 +133,61 @@
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
                         <i class="icon-book-open nav-icon"></i>
-                        {{trans('admin.settings.title')}}
+                        الاعدادات
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="pagesDropdown">
                         <li>
-                            <a class="dropdown-item" href="{{url('admin/settings')}}">{{trans('admin.settings.index')}}</a>
+                            <a class="dropdown-item" href="{{url('admin/settings')}}">الاعدادات العامة</a>
                         </li>
                         <li>
-                        <a class="dropdown-item" href="{{url('admin/social_settings')}}">{{trans('admin.settings.social')}}</a>
+                            <a class="dropdown-item" href="{{url('admin/social-settings')}}">اعدادت التواصل</a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="pricing.html">Pricing Plans</a>
+                            <a class="dropdown-item" href="{{url('admin/front-settings')}}">اعدادات الواجهة</a>
                         </li>
-                        <li>
-                            <a class="dropdown-item" href="faq.html">Faq</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="search-results.html">Search Results</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="blog.html">Blog</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="account-settings.html">Account Settings</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-toggle sub-nav-link" href="#" id="customGallery" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Gallery
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="customGallery">
-                                <li>
-                                    <a class="dropdown-item" href="gallery.html">Gallery Slider</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="gallery2.html">Gallery Thumbnail</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="gallery3.html">Gallery Hover</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="icons.html">Icons</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="typography.html">Typography</a>
-                        </li>
+
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="formsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="formsDropdown" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
                         <i class="icon-edit1 nav-icon"></i>
-                        الإشعارات الإدارية
+                        الاعضاء
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="formsDropdown">
+
                         <li>
-                            <a class="dropdown-item" href="wizard.html">Wizards</a>
+                            <a class="dropdown-item" href="{{url('admin/users')}}">الاعضاء</a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="bs-select.html">BS Select</a>
+                            <a class="dropdown-item" href="{{url('admin/users/create')}}">اضافة عضو جديد</a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="input-tags.html">Input Tags</a>
+                            <a class="dropdown-item" href="{{url('admin/admins')}}">المشرفين</a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="input-masks.html">Input Mask</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-toggle sub-nav-link" href="#" id="customDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Custom Forms
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="customDropdown">
-                                <li>
-                                    <a class="dropdown-item" href="contact.html">Contact Form</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="contact2.html">Contact Form #2</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="contact3.html">Contact Form #3</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item" href="contact4.html">Contact Form #4</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="form-inputs.html">Form Inputs</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="input-groups.html">Input Groups</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="check-radio.html">Check Boxes</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="range-sliders.html">Range Sliders</a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="editor.html">Editor</a>
+                            <a class="dropdown-item" href="{{url('admin/admins/create')}}">اضافة عضو جديد</a>
                         </li>
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="uiElementsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="uiElementsDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="icon-image nav-icon"></i>
                         التحكم بالمشرفين
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="uiElementsDropdown">
-                        
-                            <li>
-                                <a class="dropdown-item" href="{{url('admin/admin-users')}}">المشرفين</a>
-                            </li>
-                            
+
                         <li>
-                            <a class="dropdown-toggle sub-nav-link" href="#" id="navsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="dropdown-item" href="{{url('admin/admin-users')}}">المشرفين</a>
+                        </li>
+
+                        <li>
+                            <a class="dropdown-toggle sub-nav-link" href="#" id="navsDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Navbars
                             </a>
                             <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="navsDropdown">
@@ -256,7 +200,8 @@
                             </ul>
                         </li>
                         <li>
-                            <a class="dropdown-toggle sub-nav-link" href="#" id="componentsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="dropdown-toggle sub-nav-link" href="#" id="componentsDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Components
                             </a>
                             <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="componentsDropdown">
@@ -284,7 +229,8 @@
                             </ul>
                         </li>
                         <li>
-                            <a class="dropdown-toggle sub-nav-link" href="#" id="gridDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="dropdown-toggle sub-nav-link" href="#" id="gridDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Grid
                             </a>
                             <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="gridDropdown">
@@ -297,7 +243,8 @@
                             </ul>
                         </li>
                         <li>
-                            <a class="dropdown-toggle sub-nav-link" href="#" id="imagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="dropdown-toggle sub-nav-link" href="#" id="imagesDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Images
                             </a>
                             <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="imagesDropdown">
@@ -316,7 +263,8 @@
                             </ul>
                         </li>
                         <li>
-                            <a class="dropdown-toggle sub-nav-link" href="#" id="accordionsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="dropdown-toggle sub-nav-link" href="#" id="accordionsDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Accordions
                             </a>
                             <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="accordionsDropdown">
@@ -335,7 +283,8 @@
                             </ul>
                         </li>
                         <li>
-                            <a class="dropdown-toggle sub-nav-link" href="#" id="alertDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="dropdown-toggle sub-nav-link" href="#" id="alertDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Notifications
                             </a>
                             <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="alertDropdown">
@@ -362,13 +311,15 @@
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="layoutsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="layoutsDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="icon-layers2 nav-icon"></i>
                         التحكم بالأقسام
                     </a>
                     <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="layoutsDropdown">
                         <li>
-                            <a class="dropdown-toggle sub-nav-link" href="#" id="submenuDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="dropdown-toggle sub-nav-link" href="#" id="submenuDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Opens Right
                             </a>
                             <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="submenuDropdown">
@@ -381,7 +332,8 @@
                             </ul>
                         </li>
                         <li class="open-left">
-                            <a class="dropdown-toggle sub-nav-link" href="#" id="submenuLeftDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="dropdown-toggle sub-nav-link" href="#" id="submenuLeftDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Opens Left
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="submenuLeftDropdown">
@@ -396,13 +348,15 @@
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="graphsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="graphsDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class="icon-pie-chart1 nav-icon"></i>
                         التحكم بالأعضاء
                     </a>
                     <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="graphsDropdown">
                         <li class="open-left">
-                            <a class="dropdown-toggle sub-nav-link" href="#" id="apexDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="dropdown-toggle sub-nav-link" href="#" id="apexDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Apex Graphs
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="apexDropdown">
@@ -448,7 +402,8 @@
                             <a class="dropdown-item" href="c3-graphs.html">C3 Graphs</a>
                         </li>
                         <li class="open-left">
-                            <a class="dropdown-toggle sub-nav-link" href="#" id="mapsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="dropdown-toggle sub-nav-link" href="#" id="mapsDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Vector Maps
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="mapsDropdown">
@@ -463,9 +418,10 @@
                     </ul>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="loginDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="loginDropdown" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
                         <i class="icon-alert-triangle nav-icon"></i>
-                         خدمات الموقع
+                        خدمات الموقع
                     </a>
                     <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="loginDropdown">
                         <li>
@@ -478,7 +434,8 @@
                             <a class="dropdown-item" href="forgot-pwd.html">روابط الموقع</a>
                         </li>
                         <li class="open-left">
-                            <a class="dropdown-toggle sub-nav-link" href="#" id="subscribeDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="dropdown-toggle sub-nav-link" href="#" id="subscribeDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 روابط التواصل الإجتماعى
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="subscribeDropdown">
@@ -491,7 +448,8 @@
                             </ul>
                         </li>
                         <li class="open-left">
-                            <a class="dropdown-toggle sub-nav-link" href="#" id="errorDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="dropdown-toggle sub-nav-link" href="#" id="errorDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Error Pages
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="errorDropdown">
@@ -510,7 +468,8 @@
 
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="loginDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="loginDropdown" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
                         <i class="icon-alert-triangle nav-icon"></i>
                         اتصل بنا
                     </a>
@@ -525,7 +484,8 @@
                             <a class="dropdown-item" href="forgot-pwd.html">Forgot Password</a>
                         </li>
                         <li class="open-left">
-                            <a class="dropdown-toggle sub-nav-link" href="#" id="subscribeDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="dropdown-toggle sub-nav-link" href="#" id="subscribeDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Subscribe
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="subscribeDropdown">
@@ -538,7 +498,8 @@
                             </ul>
                         </li>
                         <li class="open-left">
-                            <a class="dropdown-toggle sub-nav-link" href="#" id="errorDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="dropdown-toggle sub-nav-link" href="#" id="errorDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Error Pages
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="errorDropdown">
@@ -552,17 +513,8 @@
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link" href="{{url('admin/translations')}}" >
-                        التحكم بالترجمة والمسميات
-                    </a>
-                </li>
 
-                <li class="nav-item"><a class="nav-link" href="{{ url('admin/users') }}"><i class="nav-icon icon-magnet"></i> {{ trans('admin.user.title') }}</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{ url('admin/cities') }}"><i class="nav-icon icon-umbrella"></i> {{ trans('admin.city.title') }}</a></li>
-           {{-- Do not delete me :) I'm used for auto-generation menu items --}}
-                {{-- Do not delete me :) I'm also used for auto-generation menu items --}}
-                
+
             </ul>
         </div>
     </nav>

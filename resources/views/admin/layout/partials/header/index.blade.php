@@ -12,8 +12,10 @@
 	<meta name="csrf-token" content="{{ csrf_token() }}">
 
 	<link rel="shortcut icon" href="{{asset('assets/dashboard')}}/img/fav.png" />
+	<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
 	<!-- Title -->
-	<title>@yield('title', 'site_name')</title>
+	<title>@yield('title', setting('site_name'))</title>
 	<!-- *************
 			************ Common Css Files *************
 		************ -->
