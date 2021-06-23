@@ -71,7 +71,7 @@
                         <li>
                             <a href="#">
                                 <div class="user-img away">
-                                    <img src="{{asset('dashboard')}}/img/user21.png" alt="User" />
+                                    <img src="{{asset('assets/dashboard')}}/img/user21.png" alt="User" />
                                 </div>
                                 <div class="details">
                                     <div class="user-title">Abbott</div>
@@ -83,7 +83,7 @@
                         <li>
                             <a href="#">
                                 <div class="user-img busy">
-                                    <img src="{{asset('dashboard')}}/img/user10.png" alt="User" />
+                                    <img src="{{asset('assets/dashboard')}}/img/user10.png" alt="User" />
                                 </div>
                                 <div class="details">
                                     <div class="user-title">Braxten</div>
@@ -95,7 +95,7 @@
                         <li>
                             <a href="#">
                                 <div class="user-img online">
-                                    <img src="{{asset('dashboard')}}/img/user6.png" alt="User" />
+                                    <img src="{{asset('assets/dashboard')}}/img/user6.png" alt="User" />
                                 </div>
                                 <div class="details">
                                     <div class="user-title">Larkyn</div>
