@@ -2,7 +2,7 @@
 <header class="header">
     <div class="logo-wrapper">
         <a href="index.html" class="logo">
-            <img src="{{asset('public/images/'.'logo')}}" alt="main-logo">
+            <img src="{{asset('public/images/'.setting('logo'))}}" alt="main-logo">
         </a>
         <a href="#" class="quick-links-btn" data-toggle="tooltip" data-placement="right" title=""
             data-original-title="Quick Links">
