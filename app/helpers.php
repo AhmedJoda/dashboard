@@ -4,7 +4,7 @@
 if (!function_exists('user_email')) {
     function isAdmin()
     {
-        return auth()->user()->is_admin;
+        return auth()->user()->is_admin ?? 0;
     }
 }
 
