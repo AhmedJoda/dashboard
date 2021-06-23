@@ -1,6 +1,8 @@
 <?php
 namespace App\Http\Middleware;
+
 use Closure;
+
 class Admin
 {
     /**
@@ -12,14 +14,12 @@ class Admin
      */
     public function handle($request, Closure $next)
     {
-       if(auth('admin')->guest())
-       {
+        if (auth('admin')->guest()) {
             return redirect(url('admin/login'));
-       }elseif(auth('admin')->check())
-       {
-         return $next($request); 
-       }else{
-         return redirect('404');
-       }
+        } elseif (auth('admin')->check()) {
+            return $next($request);
+        } else {
+            return abort('404');
+        }
     }
 }
