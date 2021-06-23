@@ -2,9 +2,10 @@
 <header class="header">
     <div class="logo-wrapper">
         <a href="index.html" class="logo">
-            <img src="{{asset('public/images/'.setting('logo'))}}" alt="main-logo">
+            <img src="{{asset('public/images/'.'logo')}}" alt="main-logo">
         </a>
-        <a href="#" class="quick-links-btn" data-toggle="tooltip" data-placement="right" title="" data-original-title="Quick Links">
+        <a href="#" class="quick-links-btn" data-toggle="tooltip" data-placement="right" title=""
+            data-original-title="Quick Links">
             <i class="icon-menu1"></i>
         </a>
     </div>
@@ -25,12 +26,13 @@
                 <div class="dropdown-menu dropdown-menu-right lrg" aria-labelledby="notifications">
                     <div class="dropdown-menu-header">
                         Tasks (05)
-                    </div>	
+                    </div>
                     <ul class="header-tasks">
                         <li>
                             <p>#48 - Dashboard UI<span>90%</span></p>
                             <div class="progress">
-                                <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
+                                <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="90"
+                                    aria-valuemin="0" aria-valuemax="100" style="width: 90%">
                                     <span class="sr-only">90% Complete (success)</span>
                                 </div>
                             </div>
@@ -38,7 +40,8 @@
                         <li>
                             <p>#95 - Alignment Fix<span>60%</span></p>
                             <div class="progress">
-                                <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="60"
+                                    aria-valuemin="0" aria-valuemax="100" style="width: 60%">
                                     <span class="sr-only">60% Complete (success)</span>
                                 </div>
                             </div>
@@ -46,7 +49,8 @@
                         <li>
                             <p>#7 - Broken Button<span>40%</span></p>
                             <div class="progress">
-                                <div class="progress-bar bg-secondary" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                <div class="progress-bar bg-secondary" role="progressbar" aria-valuenow="40"
+                                    aria-valuemin="0" aria-valuemax="100" style="width: 40%">
                                     <span class="sr-only">40% Complete (success)</span>
                                 </div>
                             </div>
@@ -105,24 +109,30 @@
             </li>
             <li class="dropdown">
                 <a href="#" id="userSettings" class="user-settings" data-toggle="dropdown" aria-haspopup="true">
-                   
-                    @if(!is_null(config('admin-auth.defaults.guard')))
-                    <span class="user-name">{{ Auth::guard(config('admin-auth.defaults.guard'))->check() ? Auth::guard(config('admin-auth.defaults.guard'))->user()->full_name : 'Anonymous' }}</span>
-                @else
-                    <span class="user-name">{{ Auth::check() ? Auth::user()->full_name : 'Anonymous' }}</span>
-                @endif
 
-                @if(Auth::check() && Auth::user()->avatar_thumb_url)
-                <img src="{{ Auth::user()->avatar_thumb_url }}" class="avatar-photo">
-            @elseif(Auth::check() && Auth::user()->first_name && Auth::user()->last_name)
-                <span class="avatar">{{ mb_substr(Auth::user()->first_name, 0, 1) }}{{ mb_substr(Auth::user()->last_name, 0, 1) }}</span>
-            @elseif(Auth::check() && Auth::user()->name)
-                <span class="avatar">{{ mb_substr(Auth::user()->name, 0, 1) }}</span>
-            @elseif(Auth::guard(config('admin-auth.defaults.guard'))->check() && Auth::guard(config('admin-auth.defaults.guard'))->user()->first_name && Auth::guard(config('admin-auth.defaults.guard'))->user()->last_name)
-                <span class="avatar">{{ mb_substr(Auth::guard(config('admin-auth.defaults.guard'))->user()->first_name, 0, 1) }}{{ mb_substr(Auth::guard(config('admin-auth.defaults.guard'))->user()->last_name, 0, 1) }}</span>
-            @else
-                <span class="avatar"><i class="fa fa-user"></i></span>
-            @endif
+                    @if(!is_null(config('admin-auth.defaults.guard')))
+                    <span class="user-name">{{ Auth::guard(config('admin-auth.defaults.guard'))->check() ?
+                        Auth::guard(config('admin-auth.defaults.guard'))->user()->full_name : 'Anonymous' }}</span>
+                    @else
+                    <span class="user-name">{{ Auth::check() ? Auth::user()->full_name : 'Anonymous' }}</span>
+                    @endif
+
+                    @if(Auth::check() && Auth::user()->avatar_thumb_url)
+                    <img src="{{ Auth::user()->avatar_thumb_url }}" class="avatar-photo">
+                    @elseif(Auth::check() && Auth::user()->first_name && Auth::user()->last_name)
+                    <span class="avatar">{{ mb_substr(Auth::user()->first_name, 0, 1) }}{{
+                        mb_substr(Auth::user()->last_name, 0, 1) }}</span>
+                    @elseif(Auth::check() && Auth::user()->name)
+                    <span class="avatar">{{ mb_substr(Auth::user()->name, 0, 1) }}</span>
+                    @elseif(Auth::guard(config('admin-auth.defaults.guard'))->check() &&
+                    Auth::guard(config('admin-auth.defaults.guard'))->user()->first_name &&
+                    Auth::guard(config('admin-auth.defaults.guard'))->user()->last_name)
+                    <span class="avatar">{{
+                        mb_substr(Auth::guard(config('admin-auth.defaults.guard'))->user()->first_name, 0, 1) }}{{
+                        mb_substr(Auth::guard(config('admin-auth.defaults.guard'))->user()->last_name, 0, 1) }}</span>
+                    @else
+                    <span class="avatar"><i class="fa fa-user"></i></span>
+                    @endif
 
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userSettings">
@@ -143,11 +153,12 @@
                 </div>
             </li>
             <li>
-                <a href="#" class="quick-settings-btn" data-toggle="tooltip" data-placement="left" title="" data-original-title="Quick Settings">
+                <a href="#" class="quick-settings-btn" data-toggle="tooltip" data-placement="left" title=""
+                    data-original-title="Quick Settings">
                     <i class="icon-list"></i>
                 </a>
             </li>
-        </ul>						
+        </ul>
         <!-- Header actions end -->
     </div>
 </header>
