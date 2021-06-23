@@ -26,4 +26,5 @@ Route::get('/clear-cache', function () {
 });
 
 Route::get('admin/login', 'Admin\AuthController@login');
+Route::post('admin/login', 'Admin\AuthController@attempt')->name('admin.login.attempt');
 Route::get('admin/register', 'Admin\AuthController@register');
