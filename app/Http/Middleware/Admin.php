@@ -14,9 +14,9 @@ class Admin
      */
     public function handle($request, Closure $next)
     {
-        if (auth('admin')->guest()) {
+        if (!auth() and !isAdmin()) {
             return redirect(url('admin/login'));
-        } elseif (auth('admin')->check()) {
+        } elseif (isAdmin()) {
             return $next($request);
         } else {
             return abort('404');
