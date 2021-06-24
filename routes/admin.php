@@ -10,3 +10,4 @@ Route::get('front-settings', 'SettingController@frontSettings');
 Route::post('settings', 'SettingController@store');
 
 Route::resource('users', 'UserController');
+Route::resource('admins', 'AdminController');

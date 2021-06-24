@@ -11,7 +11,7 @@
             <div class="form-group"><label for="">الشعار</label><input type="file" name="logo" class="form-control">
             </div>
             @if (setting('logo'))
-            <img width="100" height="100" src="{{asset('public/images/'.setting('logo'))}}" alt="">
+            <img width="100" height="100" src="{{getUrl(setting('logo'))}}" alt="">
             @endif
             <div class="form-group"><label for="">اسم الموقع</label><input type="text" name="site_name"
                     value="{{ setting('site_name') }}" class="form-control"></div>

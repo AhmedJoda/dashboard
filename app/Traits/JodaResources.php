@@ -5,6 +5,7 @@ namespace App\Traits;
 use Illuminate\Support\Facades\File;
 use LogicException;
 use Illuminate\Support\Str;
+use Illuminate\Http\Request;
 
 trait JodaResources
 {
@@ -35,8 +36,13 @@ trait JodaResources
 
     public function index()
     {
-        ${$this->pluralName} = $this->model::all();
-        $index = $this->model::all();
+        if (method_exists($this, 'query')) {
+            ${$this->pluralName} = $this->query($this->model::query())->get();
+        } else {
+            ${$this->pluralName} = $this->model::all();
+        }
+        
+        $index = ${$this->pluralName};
         $route = $this->route;
         return view("{$this->view}.index", compact($this->pluralName, 'index', 'route'));
     }
@@ -44,15 +50,17 @@ trait JodaResources
 
     public function create()
     {
-        return view("{$this->view}.create");
+        $route = $this->route;
+        return view("{$this->view}.create", compact('route'));
     }
 
 
     public function store()
     {
-        $this->beforeStore();
-
         $this->validateRequest();
+        
+        $this->beforeStore();
+        dd(request());
         $data = $this->uploadFilesIfExist();
         $this->model::create($data);
 
@@ -80,9 +88,10 @@ trait JodaResources
 
     public function update($id)
     {
+        $this->validateRequest();
+        
         $this->beforeUpdate();
 
-        $this->validateRequest();
         $data = $this->uploadFilesIfExist();
         $this->model::find($id)->update($data);
 

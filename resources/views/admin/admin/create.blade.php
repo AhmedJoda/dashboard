@@ -4,6 +4,7 @@
 
 @section('content')
 <x-create-form :route="$route">
+
     <div class="form-body text-white">
         <div class="row">
             <div class="col-md-6">
@@ -30,4 +31,5 @@
         </div>
     </div>
 </x-create-form>
+
 @endsection

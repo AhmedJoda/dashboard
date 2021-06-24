@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class SettingController extends Controller
 {
@@ -35,9 +36,11 @@ class SettingController extends Controller
     {
         $data = $request->except('_token');
         if ($request->logo) {
-            $imageName = time().'.'.$request->logo->extension();
-            $request->logo->move(public_path('images'), $imageName);
-            $data['logo'] =  $imageName;
+            $fileName = 'logo'.'.'.$request->logo->extension();
+
+            upload($fileName, $request->logo);
+            
+            $data['logo'] =  $fileName;
         }
         setting($data)->save();
         return back();

@@ -169,7 +169,7 @@
                             <a class="dropdown-item" href="{{url('admin/admins')}}">المشرفين</a>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="{{url('admin/admins/create')}}">اضافة عضو جديد</a>
+                            <a class="dropdown-item" href="{{url('admin/admins/create')}}">اضافة مشرف جديد</a>
                         </li>
                     </ul>
                 </li>

@@ -14,16 +14,31 @@ class UserController extends Controller
     protected $model = User::class;
     protected $view = 'admin.user';
     protected $route = 'admin.users';
-    public function store()
+
+    public function query($query)
     {
-        $this->validate(request(),[
-            'name'  =>  'required',
-            'email'  =>  'required|email',
-            'password'  =>  'required',
+        return $query->where('is_admin', 0);
+    }
+    
+    // bad
+    // public function store()
+    // {
+    //     $this->validate(request(),[
+    //         'name'  =>  'required',
+    //         'email'  =>  'required|email',
+    //         'password'  =>  'required',
+    //     ]);
+    //     $data = request()->all();
+    //     $data['password'] = Hash::make($data['password']);
+    //     User::query()->create($data);
+    //     return redirect('admin/users');
+    // }
+
+    // good
+    public function beforeStore()
+    {
+        request()->merge([
+            'password' => Hash::make(request()->password)
         ]);
-        $data = request()->all();
-        $data['password'] = Hash::make($data['password']);
-        User::query()->create($data);
-        return redirect('admin/users');
     }
 }
