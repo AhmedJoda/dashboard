@@ -57,7 +57,7 @@ trait JodaResources
 
     public function store()
     {
-        $this->validateRequest();
+        $this->validateStoreRequest();
         
         $this->beforeStore();
         $data = $this->uploadFilesIfExist();
@@ -83,13 +83,14 @@ trait JodaResources
     {
         ${$this->name} = $this->model::find($id);
         $edit = $this->model::find($id);
-        return view("$this->view.edit", compact($this->name, 'edit'));
+        $route = $this->route;
+        return view("$this->view.edit", compact($this->name, 'edit', 'route'));
     }
 
 
     public function update($id)
     {
-        $this->validateRequest();
+        $this->validateUpdateRequest();
         
         $this->beforeUpdate();
 
@@ -120,9 +121,19 @@ trait JodaResources
     }
 
 
-    public function validateRequest()
+    public function validateStoreRequest()
     {
-        $rules = isset($this->model::$rules) ? $this->model::$rules : null;
+        $rules = isset($this->model::$storeRules) ? $this->model::$storeRules :
+            (isset($this->model::$rules) ? $this->model::$rules : null);
+        if ($rules) {
+            request()->validate($rules);
+        }
+    }
+    
+    public function validateUpdateRequest()
+    {
+        $rules = isset($this->model::$updateRules) ? $this->model::$updateRules :
+            (isset($this->model::$rules) ? $this->model::$rules : null);
         if ($rules) {
             request()->validate($rules);
         }
@@ -143,7 +154,7 @@ trait JodaResources
                         time() . '.' .
                         request()->file($file)->getClientOriginalExtension();
                     $data[$file] = request()->file($file)->move(
-                        "uploads/{$this->pluralName}",
+                        "storage/app/{$this->pluralName}",
                         $fileName
                     );
                 }

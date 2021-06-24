@@ -1,6 +1,6 @@
 @extends('admin.layout.index')
 
-@section('title', 'الاعضاء')
+@section('title', 'المشرفين')
 
 @section('content')
 

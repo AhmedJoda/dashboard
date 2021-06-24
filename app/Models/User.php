@@ -31,4 +31,9 @@ class User extends Authenticatable
         'email'  =>  'required|email',
         'password'  =>  'required',
     ];
+
+    public static $updateRules = [
+        'name'  =>  'required',
+        'email'  =>  'required|email',
+    ];
 }

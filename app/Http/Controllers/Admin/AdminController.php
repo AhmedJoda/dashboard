@@ -19,11 +19,21 @@ class AdminController extends Controller
     {
         return $query->where('is_admin', 1);
     }
+
     public function beforeStore()
     {
+        $this->mergePassword();
+    }
+    
+    public function beforeUpdate()
+    {
+        $this->mergePassword();
+    }
+
+    public function mergePassword()
+    {
         request()->merge([
-            'password' => Hash::make(request()->password),
-            'is_admin' => 1
+            'password' => Hash::make(request()->password)
         ]);
     }
 }

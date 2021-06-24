@@ -37,6 +37,16 @@ class UserController extends Controller
     // good
     public function beforeStore()
     {
+        $this->mergePassword();
+    }
+
+    public function beforeUpdate()
+    {
+        $this->mergePassword();
+    }
+
+    public function mergePassword()
+    {
         request()->merge([
             'password' => Hash::make(request()->password)
         ]);
