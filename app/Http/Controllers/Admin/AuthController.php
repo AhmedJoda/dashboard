@@ -19,3 +19,4 @@ class AuthController extends Controller
         return back()->withErrors(['auth'=>"بيانات خاطئة"]);
     }
 }
+;
