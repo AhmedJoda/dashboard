@@ -27,8 +27,8 @@
 
 
      // optional
-     // will be plural of the name attribute if not set in this example 'users'
-     protected $view = 'users';
+     // will be the name of the model if not set in this example 'user'
+     protected $view = 'user';
      // name of the model that will be used in returned views
 
 
@@ -49,16 +49,16 @@
 
 //methods will be provided
 
-//index => will return view($view) with tow variables, 'index' (all users) and plural name of the model in this example 'users' you can use either of them
+//index => will return view($view) with three variables, 'route' route of the resource to be used in actions, 'index' (all users) and plural name of the model in this example 'users' you can use either of them
 
 //create => will return view($view.create)
 
-//store => will save all cols from request then return to $route.indx
+//store => will save all cols from request then return to $route.index
 
 //show  => will return view($view.show ) with two variables, 'show' and name of the model in this example 'user' you can use either of them
 
 //edit  => will return view($view.edit) with tow variables, 'edit' and name of the model in this example 'user' you can use either of them
 
-//update => will update all cols from request then return to $route.indx
+//update => will update all cols from request then return to $route.index
 
-//destroy => will save all cols from request then return to $route.indx
+//destroy => will save all cols from request then return to $route.index
