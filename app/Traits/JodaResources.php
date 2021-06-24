@@ -60,11 +60,12 @@ trait JodaResources
         $this->validateRequest();
         
         $this->beforeStore();
-        dd(request());
         $data = $this->uploadFilesIfExist();
         $this->model::create($data);
 
         $this->afterStore();
+
+        session()->flash('success', trans('admin.added'));
 
         return redirect(route("$this->route.index"));
     }
@@ -97,6 +98,8 @@ trait JodaResources
 
         $this->afterUpdate();
 
+        session()->flash('success', trans('admin.updated'));
+
         return redirect(route("$this->route.index"));
     }
 
@@ -110,6 +113,8 @@ trait JodaResources
         ${$this->name}->delete();
 
         $this->afterDestroy();
+
+        session()->flash('success', trans('admin.deleted'));
 
         return redirect(route("$this->route.index"));
     }
