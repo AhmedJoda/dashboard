@@ -11,3 +11,6 @@ Route::post('settings', 'SettingController@store');
 
 Route::resource('users', 'UserController');
 Route::resource('admins', 'AdminController');
+
+Route::get('/profile', 'ProfileController@index');
+Route::post('/profile', 'ProfileController@store');

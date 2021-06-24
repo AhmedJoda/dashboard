@@ -146,9 +146,13 @@
                             <h5>{{ Auth::check() ? Auth::user()->full_name : 'Anonymous' }}</h5>
                             <p>Admin</p>
                         </div>
-                        <a href="{{ url('admin/profile') }}"><i class="icon-user1"></i> My Profile</a>
-                        <a href="account-settings.html"><i class="icon-settings1"></i> Account Settings</a>
-                        <a href="{{url('admin/logout')}}"><i class="icon-log-out1"></i> Sign Out</a>
+                        <a href="{{ url('admin/profile') }}"><i class="icon-user1"></i> الملف الشخصي</a>
+
+                        {!! Form::open(['url' => route('logout'),'method' => 'post' ,'id'=> 'logout']) !!}
+                        <a class="btn" onclick="document.getElementById('logout').submit();">
+                            <i class="icon-log-out1"></i> تسجيل الخروج
+                        </a>
+                        {!! Form::close() !!}
                     </div>
                 </div>
             </li>
