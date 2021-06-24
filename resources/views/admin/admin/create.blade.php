@@ -4,7 +4,7 @@
 
 @section('content')
 <x-create-form :route="$route">
-
+    {!! Form::hidden('is_admin',1) !!}
     <div class="form-body text-white">
         <div class="row">
             <div class="col-md-6">
